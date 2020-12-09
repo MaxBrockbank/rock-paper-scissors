@@ -26,5 +26,15 @@ namespace RPC.Tests
       string result = Game.RPCWinner(player1Input, player2Input);
       Assert.AreEqual("rock wins!", result);
     }
+
+    [TestMethod]
+    public void RPCWinner_PaperWins_String()
+    {
+      string player1Input = "rock";
+      string player2Input = "paper";
+
+      string result = Game.RPCWinner(player1Input, player2Input);
+      Assert.AreEqual("paper wins!", result);
+    }
   }
 }
